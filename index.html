@@ -1,0 +1,1782 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shree Associates - Legal & Property Compliance Consultant</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-red: #C00000;
+            --dark-red: #8B0000;
+            --light-red: #E8B4B8;
+            --white: #FFFFFF;
+            --light-gray: #F8F8F8;
+            --text-dark: #1A1A1A;
+            --text-light: #666666;
+            --shadow: 0 4px 15px rgba(192, 0, 0, 0.1);
+            --shadow-hover: 0 8px 25px rgba(192, 0, 0, 0.15);
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--white);
+        }
+
+        /* ============ HEADER ============ */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+        }
+
+        .header-top {
+            background-color: var(--primary-red);
+            color: var(--white);
+            padding: 12px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .header-top a {
+            color: var(--white);
+            text-decoration: none;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: opacity 0.3s ease;
+        }
+
+        .header-top a:hover {
+            opacity: 0.85;
+        }
+
+        .header-main {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            gap: 30px;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            flex: 1;
+        }
+
+        .logo-placeholder {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary-red), var(--dark-red));
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .company-info h1 {
+            color: var(--primary-red);
+            font-size: 24px;
+            margin: 0;
+            font-weight: 700;
+        }
+
+        .company-info p {
+            color: var(--text-light);
+            font-size: 12px;
+            margin: 4px 0 0 0;
+        }
+
+        .nav-buttons {
+            display: flex;
+            gap: 12px;
+        }
+
+        .btn-call, .btn-whatsapp {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-call {
+            background-color: var(--primary-red);
+            color: var(--white);
+        }
+
+        .btn-call:hover {
+            background-color: var(--dark-red);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(192, 0, 0, 0.3);
+        }
+
+        .btn-whatsapp {
+            background-color: var(--white);
+            color: var(--primary-red);
+            border: 2px solid var(--primary-red);
+        }
+
+        .btn-whatsapp:hover {
+            background-color: var(--light-gray);
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .header-main {
+                flex-direction: column;
+                text-align: center;
+                padding: 15px;
+            }
+
+            .company-info h1 {
+                font-size: 20px;
+            }
+
+            .nav-buttons {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .btn-call, .btn-whatsapp {
+                font-size: 12px;
+                padding: 8px 16px;
+            }
+        }
+
+        /* ============ HERO SECTION ============ */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-red), var(--dark-red));
+            color: var(--white);
+            padding: 60px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 400px;
+            height: 400px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 50%;
+            transform: translate(100px, -100px);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .banner-image {
+            width: 100%;
+            height: 250px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .founder-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.15);
+            margin: 0 auto 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 3px solid var(--white);
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .hero h2 {
+            font-size: 42px;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .hero .tagline {
+            font-size: 18px;
+            margin-bottom: 30px;
+            opacity: 0.95;
+            font-weight: 300;
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                padding: 40px 20px;
+            }
+
+            .hero h2 {
+                font-size: 28px;
+            }
+
+            .hero .tagline {
+                font-size: 14px;
+            }
+
+            .banner-image {
+                height: 180px;
+            }
+        }
+
+        /* ============ SECTIONS ============ */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        section {
+            padding: 70px 20px;
+            border-bottom: 1px solid #E5E5E5;
+        }
+
+        section:last-of-type {
+            border-bottom: none;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            color: var(--primary-red);
+            font-size: 36px;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .section-title p {
+            color: var(--text-light);
+            font-size: 16px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 768px) {
+            section {
+                padding: 50px 20px;
+            }
+
+            .section-title h2 {
+                font-size: 26px;
+            }
+        }
+
+        /* ============ ABOUT FOUNDER ============ */
+        .founder-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .founder-info h3 {
+            color: var(--primary-red);
+            font-size: 28px;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .founder-info .title {
+            color: var(--text-light);
+            font-size: 14px;
+            margin-bottom: 25px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .experience-badge {
+            background: linear-gradient(135deg, var(--primary-red), var(--dark-red));
+            color: var(--white);
+            padding: 12px 20px;
+            border-radius: 8px;
+            display: inline-block;
+            margin-bottom: 20px;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .founder-info p {
+            color: var(--text-light);
+            line-height: 1.8;
+            margin-bottom: 25px;
+            font-size: 15px;
+        }
+
+        .qualifications {
+            margin-bottom: 30px;
+        }
+
+        .qualifications p {
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+
+        .qualifications strong {
+            color: var(--primary-red);
+        }
+
+        .highlights {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .highlight-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 15px;
+            background: var(--light-gray);
+            border-left: 4px solid var(--primary-red);
+            border-radius: 4px;
+        }
+
+        .highlight-item::before {
+            content: '✓';
+            color: var(--primary-red);
+            font-weight: bold;
+            font-size: 18px;
+            flex-shrink: 0;
+        }
+
+        .highlight-item span {
+            color: var(--text-dark);
+            font-weight: 500;
+        }
+
+        .founder-photo-large {
+            width: 100%;
+            height: 400px;
+            background: linear-gradient(135deg, var(--light-gray), #EEE);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--shadow);
+            font-size: 14px;
+            color: var(--text-light);
+        }
+
+        @media (max-width: 768px) {
+            .founder-section {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .founder-info h3 {
+                font-size: 24px;
+            }
+
+            .founder-photo-large {
+                height: 300px;
+            }
+        }
+
+        /* ============ ABOUT COMPANY ============ */
+        .company-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: start;
+        }
+
+        .company-text h3 {
+            color: var(--primary-red);
+            font-size: 24px;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .company-text p {
+            color: var(--text-light);
+            margin-bottom: 20px;
+            line-height: 1.8;
+            font-size: 15px;
+        }
+
+        .services-list {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+        }
+
+        .service-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            padding: 15px;
+            background: var(--light-gray);
+            border-radius: 8px;
+            border-left: 4px solid var(--primary-red);
+            transition: all 0.3s ease;
+        }
+
+        .service-item:hover {
+            background: #F0F0F0;
+            transform: translateX(5px);
+        }
+
+        .service-item::before {
+            content: '→';
+            color: var(--primary-red);
+            font-weight: bold;
+            font-size: 20px;
+            flex-shrink: 0;
+            margin-top: -2px;
+        }
+
+        .service-item span {
+            color: var(--text-dark);
+            font-weight: 500;
+            font-size: 15px;
+        }
+
+        .company-visual {
+            background: linear-gradient(135deg, var(--light-gray), #EEE);
+            height: 400px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--shadow);
+            font-size: 14px;
+            color: var(--text-light);
+        }
+
+        @media (max-width: 768px) {
+            .company-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .company-visual {
+                height: 300px;
+            }
+        }
+
+        /* ============ SERVICES CARDS ============ */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: var(--white);
+            border: 2px solid #F0F0F0;
+            border-radius: 12px;
+            padding: 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--primary-red);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover {
+            border-color: var(--primary-red);
+            box-shadow: var(--shadow-hover);
+            transform: translateY(-8px);
+        }
+
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .service-card h3 {
+            color: var(--primary-red);
+            font-size: 20px;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .service-card p {
+            color: var(--text-light);
+            font-size: 14px;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .service-benefits {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            text-align: left;
+            border-top: 1px solid #E5E5E5;
+            padding-top: 20px;
+        }
+
+        .benefit {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            font-size: 13px;
+            color: var(--text-light);
+        }
+
+        .benefit::before {
+            content: '✓';
+            color: var(--primary-red);
+            font-weight: bold;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        /* ============ WHY CHOOSE US ============ */
+        .why-choose-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .reason-box {
+            background: linear-gradient(135deg, var(--light-gray), #F5F5F5);
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        .reason-box:hover {
+            border-color: var(--primary-red);
+            box-shadow: var(--shadow);
+            transform: translateY(-5px);
+        }
+
+        .reason-icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+            color: var(--primary-red);
+            display: inline-block;
+        }
+
+        .reason-box h3 {
+            color: var(--text-dark);
+            font-size: 18px;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .reason-box p {
+            color: var(--text-light);
+            font-size: 14px;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        /* ============ LOCATIONS ============ */
+        .locations-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .location-card {
+            background: var(--white);
+            border: 2px solid #F0F0F0;
+            border-radius: 12px;
+            padding: 30px;
+            transition: all 0.3s ease;
+        }
+
+        .location-card:hover {
+            border-color: var(--primary-red);
+            box-shadow: var(--shadow-hover);
+            transform: translateY(-8px);
+        }
+
+        .location-card h3 {
+            color: var(--primary-red);
+            font-size: 20px;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .location-info {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .location-detail {
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+        }
+
+        .location-detail strong {
+            color: var(--text-dark);
+            font-weight: 600;
+            min-width: 80px;
+            margin-top: 2px;
+        }
+
+        .location-detail span {
+            color: var(--text-light);
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .location-detail-icon {
+            color: var(--primary-red);
+            font-size: 16px;
+            margin-top: 2px;
+        }
+
+        /* ============ CONTACT SECTION ============ */
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .contact-method {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+        }
+
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--primary-red), var(--dark-red));
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 24px;
+            flex-shrink: 0;
+        }
+
+        .contact-details h3 {
+            color: var(--text-dark);
+            font-size: 18px;
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+
+        .contact-details p {
+            color: var(--text-light);
+            font-size: 14px;
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        .contact-details a {
+            color: var(--primary-red);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .contact-details a:hover {
+            color: var(--dark-red);
+        }
+
+        .contact-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .btn-large {
+            padding: 15px 30px;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 15px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .btn-contact {
+            background-color: var(--primary-red);
+            color: var(--white);
+        }
+
+        .btn-contact:hover {
+            background-color: var(--dark-red);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(192, 0, 0, 0.3);
+        }
+
+        .contact-form-container {
+            background: var(--light-gray);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            color: var(--text-dark);
+            font-weight: 600;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #E0E0E0;
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 14px;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-red);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .btn-submit {
+            width: 100%;
+            padding: 14px;
+            background-color: var(--primary-red);
+            color: var(--white);
+            border: none;
+            border-radius: 8px;
+            font-weight: 700;
+            cursor: pointer;
+            font-size: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-submit:hover {
+            background-color: var(--dark-red);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(192, 0, 0, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            .contact-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .contact-form-container {
+                padding: 25px;
+            }
+        }
+
+        /* ============ CTA SECTION ============ */
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary-red), var(--dark-red));
+            color: var(--white);
+            padding: 70px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 500px;
+            height: 500px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 50%;
+            transform: translate(100px, -100px);
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 1;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .cta-section h2 {
+            font-size: 38px;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .cta-section p {
+            font-size: 18px;
+            margin-bottom: 35px;
+            opacity: 0.95;
+            line-height: 1.7;
+        }
+
+        .btn-cta {
+            background-color: var(--white);
+            color: var(--primary-red);
+            padding: 16px 40px;
+            border: none;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-block;
+            text-decoration: none;
+        }
+
+        .btn-cta:hover {
+            background-color: var(--light-gray);
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        @media (max-width: 768px) {
+            .cta-section {
+                padding: 50px 20px;
+            }
+
+            .cta-section h2 {
+                font-size: 26px;
+            }
+
+            .cta-section p {
+                font-size: 14px;
+            }
+        }
+        .team-intro {
+            max-width: 700px;
+            margin: 0 auto 50px;
+            padding: 25px;
+            background: var(--light-gray);
+            border-radius: 12px;
+            text-align: center;
+            border-left: 4px solid var(--primary-red);
+        }
+
+        .team-intro p {
+            color: var(--text-dark);
+            font-size: 16px;
+            line-height: 1.7;
+            margin: 0;
+            font-weight: 500;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 35px;
+        }
+
+        .team-card {
+            background: var(--white);
+            border: 2px solid #F0F0F0;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .team-card:hover {
+            border-color: var(--primary-red);
+            box-shadow: var(--shadow-hover);
+            transform: translateY(-10px);
+        }
+
+        .team-photo {
+            width: 100%;
+            height: 280px;
+            background: linear-gradient(135deg, #E8E8E8, #F5F5F5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .team-photo::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--primary-red);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+        }
+
+        .team-card:hover .team-photo::after {
+            transform: scaleX(1);
+        }
+
+        .team-info {
+            padding: 25px;
+        }
+
+        .team-icon {
+            font-size: 28px;
+            margin-bottom: 12px;
+            display: inline-block;
+        }
+
+        .team-card h3 {
+            color: var(--text-dark);
+            font-size: 18px;
+            margin: 12px 0 8px 0;
+            font-weight: 700;
+        }
+
+        .team-designation {
+            color: var(--primary-red);
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .team-description {
+            color: var(--text-light);
+            font-size: 13px;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            .team-grid {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 25px;
+            }
+
+            .team-photo {
+                height: 220px;
+                font-size: 60px;
+            }
+
+            .team-info {
+                padding: 20px;
+            }
+
+            .team-card h3 {
+                font-size: 16px;
+            }
+        }
+
+        .company-visual {
+            background: linear-gradient(135deg, var(--light-gray), #EEE);
+            height: 400px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--shadow);
+            font-size: 14px;
+            color: var(--text-light);
+        }
+
+        @media (max-width: 768px) {
+            .company-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .company-visual {
+                height: 300px;
+            }
+        }
+
+        /* ============ FOOTER ============ */
+        footer {
+            background-color: var(--text-dark);
+            color: var(--white);
+            padding: 50px 20px 30px;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+            text-align: left;
+        }
+
+        .footer-section h3 {
+            color: var(--primary-red);
+            font-size: 16px;
+            margin-bottom: 15px;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 14px;
+            letter-spacing: 0.5px;
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: #CCCCCC;
+            font-size: 14px;
+            line-height: 1.8;
+            text-decoration: none;
+        }
+
+        .footer-section a:hover {
+            color: var(--primary-red);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #444;
+            padding-top: 30px;
+            color: #999;
+            font-size: 13px;
+        }
+
+        /* ============ FLOATING BUTTONS ============ */
+        .floating-buttons {
+            position: fixed;
+            bottom: 30px;
+            right: 20px;
+            z-index: 999;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .fab {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            color: var(--white);
+            text-decoration: none;
+            font-size: 24px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            border: none;
+        }
+
+        .fab-whatsapp {
+            background-color: #25D366;
+        }
+
+        .fab-whatsapp:hover {
+            transform: scale(1.12) rotate(5deg);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+        }
+
+        .fab-call {
+            background-color: var(--primary-red);
+        }
+
+        .fab-call:hover {
+            transform: scale(1.12) rotate(-5deg);
+            box-shadow: 0 6px 20px rgba(192, 0, 0, 0.4);
+        }
+
+        @media (max-width: 768px) {
+            .floating-buttons {
+                bottom: 20px;
+                right: 15px;
+                gap: 12px;
+            }
+
+            .fab {
+                width: 55px;
+                height: 55px;
+                font-size: 20px;
+            }
+        }
+
+        /* ============ RESPONSIVE ============ */
+        @media (max-width: 480px) {
+            .header-top {
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            .header-top a {
+                font-size: 12px;
+            }
+
+            .header-main {
+                flex-direction: column;
+                padding: 15px;
+            }
+
+            .logo-placeholder {
+                width: 50px;
+                height: 50px;
+                font-size: 18px;
+            }
+
+            .company-info h1 {
+                font-size: 18px;
+            }
+
+            .nav-buttons {
+                width: 100%;
+            }
+
+            .section-title h2 {
+                font-size: 22px;
+            }
+
+            .cta-section h2 {
+                font-size: 22px;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 25px;
+                text-align: center;
+            }
+
+            .footer-section p,
+            .footer-section a {
+                text-align: center;
+            }
+        }
+
+        /* ============ SMOOTH SCROLL ============ */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* ============ UTILITIES ============ */
+        .text-center {
+            text-align: center;
+        }
+as
+        .mt-0 { margin-top: 0; }
+        .mb-0 { margin-bottom: 0; }
+    </style>
+</head>
+<body>
+
+    <!-- ============ HEADER ============ -->
+    <header>
+        <div class="header-top">
+            <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+                <a href="tel:+919769573939">📞 +91 976 957 3939</a>
+                <a href="mailto:shree.associates.entp@gmail.com">✉️ shree.associates.entp@gmail.com</a>
+            </div>
+            <div style="display: flex; gap: 15px;">
+                <a href="https://wa.me/+919769573939" target="_blank">WhatsApp: 976 957 3939</a>
+            </div>
+        </div>
+
+        <div class="header-main">
+            <div class="logo-section">
+                <div class="logo-placeholder"> <img src="logo.jpeg"width="75"></div>
+                <div class="company-info">
+                    <h1>SHREE ASSOCIATES</h1>
+                    <p>Legal, Society & Property Compliance Consultant</p>
+                </div>
+            </div>
+            <div class="nav-buttons">
+                <a href="tel:+919769573939" class="btn-call">📞 CALL NOW</a>
+                <a href="https://wa.me/+919769573939" class="btn-whatsapp" target="_blank">💬 WHATSAPP</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ============ HERO SECTION ============ -->
+    <section class="hero">
+        <div class="hero-content">
+            
+            <h2>Trusted Legal & Property Guidance</h2>
+            <p class="tagline">Your One Point of Contact for All Society, Legal & Property Compliance Needs
+                <br>Chahe problem legal ho ya property ki — aapke har problem ka solution, ek hi roof ke neeche.<br>
+👉 Shree Associates — Your Family Legal Advisor
+            </p>
+        </div>
+    </section>
+
+    <!-- ============ ABOUT FOUNDER ============ -->
+    <section id="founder">
+        <div class="container">
+            <div class="section-title">
+                <h2>Meet Our Founder</h2>
+                <p>20+ Years of Excellence in Legal & Property Compliance</p>
+            </div>
+
+            <div class="founder-section">
+                <div class="founder-info">
+                    <h3>Mr. Shrikant Prabhakar Ranjane</h3>
+                    <p class="title">Founder & CEO – Shree Associates</p>
+                    <div class="experience-badge">20+ Years Experience Since 2006</div>
+                    <div class="qualifications">
+                        <p><strong>Qualifications:</strong> B.Com., G.D.C. & A.</p>
+                        <p style="margin-bottom: 0;">A visionary legal consultant with deep expertise in property law, society registration, and compliance advisory. Mr. Ranjane has successfully guided thousands of societies and individuals through complex legal processes with a practical, result-oriented approach.</p>
+                    </div>
+                    <div class="highlights">
+                        <div class="highlight-item">
+                            <span>Practical & Efficient Approach</span>
+                        </div>
+                        <div class="highlight-item">
+                            <span>Clear & Transparent Legal Guidance</span>
+                        </div>
+                        <div class="highlight-item">
+                            <span>End-to-End Support & Solutions</span>
+                        </div>
+                        <div class="highlight-item">
+                            <span>Trusted by 1000+ Societies</span>
+                        </div>
+                    </div>
+                    <br>
+                </div>
+                <div class="founder-photo"> <img src="01.png" width="250"></div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ ABOUT COMPANY ============ -->
+    <section id="company">
+        <div class="container">
+            <div class="section-title">
+                <h2>About Shree Associates</h2>
+                <p>Premier Legal & Property Consultancy Firm</p>
+            </div>
+
+            <div class="company-content">
+                <div class="company-text">
+                    <h3>Who We Are</h3>
+                    <p>Shree Associates is a premier legal and property compliance consultancy firm with over two decades of proven excellence. We specialize in guiding cooperative societies, property developers, and individuals through complex legal frameworks with clarity, transparency, and efficiency.</p>
+                    <p>Our team combines deep legal expertise with practical knowledge of property and society regulations, ensuring every client receives customized solutions tailored to their unique requirements.</p>
+                    
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ SERVICES ============ -->
+    <section id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Services</h2>
+                <p>Comprehensive Legal & Property Compliance Solutions</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <h4> Housing & All Types of Co-operative Society Registration <br>
+                            गृहनिर्माण आणि सर्व प्रकारच्या सहकारी संस्थांची नोंदणी </h4>
+                            <p> We provide complete guidance and documentation support for registration of Housing, Credit, Seva societies, Trust, and Mandal , ensuring smooth approval as per government regulations. <br>
+                            गृहनिर्माण संस्था, पतसंस्था,  सेवा संस्था व अशा सर्व प्रकारच्या सहकारी संस्थांच्या  ट्रस्ट व मंडळ इत्यादी नोंदणीसाठी आवश्यक कागदपत्रे व संपूर्ण मार्गदर्शन आम्ही प्रदान करतो. </p>
+                    
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <h4> Conveyance Deed | Deemed Conveyance <br>
+                            कन्व्हेअन्स डीड | डीम्ड कन्व्हेयन्स </h4>
+                            <p> Professional assistance for transferring property ownership rights from builder to housing society, including complete documentation and legal compliance. <br>
+                            बिल्डरकडून सोसायटीच्या नावावर मालमत्तेचे मालकी हक्क हस्तांतरण करण्यासाठी कन्व्हेअन्स व डीम्ड कन्व्हेअन्स प्रक्रियेसाठी संपूर्ण कायदेशीर व कागदपत्री सहाय्य. </p>
+                </div>
+
+                <div class="service-card">
+                    <h4> CIDCO Flat, Shops & Plot Transfer CIDCO 
+                            <br>फ्लॅट, दुकान व प्लॉट ट्रान्सफर  क्लिअरन्स</h4>
+                            <p> Expert support for CIDCO property transfer, lease matters, mortgage clearance, and documentation for flats, shops, and plots. <br>
+                            CIDCO फ्लॅट, दुकाने व प्लॉट ट्रान्सफर, लीज प्रक्रिया, मॉर्गेज क्लिअरन्स व आवश्यक कागदपत्री कामासाठी तज्ञ मार्गदर्शन.</p>
+                </div>
+
+                <div class="service-card">
+                    <h4> Stamp Duty & Registration of Property <br>
+                            स्टॅम्प ड्युटी व नोंदणी </h4>
+                            <p> Complete assistance for Lease Deed, Leave & License, Flat and Shop Registration, and other legal property documentation with proper stamp duty compliance.<br>
+                            लीज डीड, लिव्ह अँड लायसन्स, फ्लॅट व दुकान नोंदणी तसेच इतर मालमत्ता कागदपत्रांसाठी स्टॅम्प ड्युटी व नोंदणीसाठी संपूर्ण सहाय्य. </p>
+                </div>
+
+                <div class="service-card">
+                    <h4> Society Accounting, Audit & Administration <br>
+                            सोसायटी अकाउंट्स, ऑडिट व व्यवस्थापन </h4>
+                            <p> Professional services for society accounts management, statutory audit, monthly billing, financial reporting, and administrative support. <br>
+                            सोसायटीचे खाते व्यवस्थापन, वैधानिक ऑडिट, मासिक बिलिंग, आर्थिक अहवाल व प्रशासकीय कामकाजासाठी व्यावसायिक सेवा. </p>
+                </div>
+
+                <div class="service-card">
+                    <h4> Redevelopment Legal Advisory <br>
+                            पुनर्विकास कायदेशीर सल्ला </h4>
+                            <p> Legal guidance and documentation support for housing society redevelopment projects, including developer agreements and PMC appointment assistance. <br>
+                            गृहनिर्माण सोसायटीच्या पुनर्विकास प्रक्रियेसाठी कायदेशीर सल्ला, करारपत्रे व PMC नियुक्तीसाठी मार्गदर्शन. </p>
+                </div>
+            </div>
+
+            <div class="service-card">
+                    <h4> Legal Services <br>
+                            कायदेशीर सेवा </h4>
+                            <p> We provide professional legal assistance for Civil Matters, Criminal Cases, Consumer Complaints, and Co-operative Society Disputes, ensuring proper guidance, documentation, and legal compliance. <br>
+                            आम्ही दीवानी प्रकरणे, फौजदारी प्रकरणे, ग्राहक तक्रारी आणि सहकारी संस्था वाद यांसाठी व्यावसायिक कायदेशीर मदत, योग्य मार्गदर्शन आणि आवश्यक कागदपत्रांची सेवा प्रदान करतो.. </p>
+                </div>
+        </div>
+    </section>
+
+        <!-- ============ OUR EXPERT TEAM ============ -->
+    <section id="team">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Expert Team</h2>
+                <p>Experienced Professionals Dedicated to Your Success</p>
+            </div>
+
+            <div class="team-intro">
+                <p>At Shree Associates, our strength lies in our experienced and dedicated professionals who ensure every client gets reliable, transparent, and result-driven service.</p>
+            </div>
+
+            <div class="team-grid">
+                <!-- Team Member 1 -->
+                <div class="team-card">
+                    <div class="team-photo"><img src="01.png" width="200"></div> <br> <br>
+                    <div class="team-info">
+                        <div class="team-icon">💼</div>
+                        <h3>Mr. Shrikant Prabhakar Ranjane</h3>
+                        <span class="team-designation">Founder & CEO</span>
+                        <p class="team-description">Visionary leader with deep expertise in legal, property, and society-related services. He leads the organization with integrity, ensuring every client receives the right guidance and solution.</p>
+                    </div>
+                </div>
+
+                <!-- Team Member 2 -->
+                <div class="team-card">
+                    <div class="team-photo"><img src="02.png" width="200"></div>
+                    <div class="team-info">
+                        <div class="team-icon">👨‍⚖️</div>
+                        <h3>Adv. Preeti Shrikant Ranjane (Bharthi)</h3>
+                        <span class="team-designation">Managing Partner & Senior Advocate</span>
+                        <p class="team-description">An experienced legal expert specializing in civil, property, and co-operative society matters. She plays a key role in handling complex legal cases and advisory.</p>
+                    </div>
+                </div>
+
+                <!-- Team Member 3 -->
+                <div class="team-card">
+                    <div class="team-photo"><img src="03.jpeg" width="150"></div>
+                    <div class="team-info">
+                        <div class="team-icon">👩‍💼</div>
+                        <h3>Mrs. Shilpa Rahul Maral</h3>
+                        <span class="team-designation">Office Manager</span>
+                        <p class="team-description">Responsible for smooth day-to-day operations, client coordination, and administrative management to ensure seamless service delivery.</p>
+                    </div>
+                </div>
+
+                <!-- Team Member 4 -->
+                <div class="team-card">
+                    <div class="team-photo"><img src="04.jpeg" width="150"></div>
+                    <div class="team-info">
+                        <div class="team-icon">🧮</div>
+                        <h3>Sneha Uday Khatpe</h3>
+                        <span class="team-designation">Senior Accountant</span>
+                        <p class="team-description">Handles accounting, audits, billing, and financial compliance with precision and professionalism.</p>
+                    </div>
+                </div>
+
+                <!-- Team Member 5 -->
+                <div class="team-card">
+                    <div class="team-photo"><img src="05.jpeg" width="150"></div>
+                    <div class="team-info">
+                        <div class="team-icon">👨‍💼</div>
+                        <h3>Mr. Shravan Baburao Rathod</h3>
+                        <span class="team-designation">Legal & Documentation Executive</span>
+                        <p class="team-description">Supports legal documentation, property work, and client processing tasks efficiently.</p>
+                    </div>
+                </div>
+
+                <!-- Team Member 6 -->
+                <div class="team-card">
+                    <div class="team-photo"><img src="06.jpeg" width="150"></div>
+                    <div class="team-info">
+                        <div class="team-icon">👩‍💼</div>
+                        <h3>Komal Deepak Waydande</h3>
+                        <span class="team-designation">Client Relationship Executive</span>
+                        <p class="team-description">Manages client communication, follow-ups, and ensures a smooth service experience.</p>
+                    </div>
+                </div>
+
+                <!-- Team Member 7 -->
+                <div class="team-card">
+                    <div class="team-photo"><img src="07.jpeg" width="150 "></div>
+                    <div class="team-info">
+                        <div class="team-icon">👨‍💼</div>
+                        <h3>Vijay Maruti Lad</h3>
+                        <span class="team-designation">Field Executive</span>
+                        <p class="team-description">Handles on-ground work including documentation, government office coordination, and process execution.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ============ WHY CHOOSE US ============ -->
+    <section id="why-us">
+        <div class="container">
+            <div class="section-title">
+                <h2>Why Choose Shree Associates</h2>
+                <p>Your Trusted Partner for Legal & Property Excellence</p>
+            </div>
+
+            <div class="why-choose-grid">
+                <div class="reason-box">
+                    <div class="reason-icon">⏱️</div>
+                    <h3>20+ Years Experience</h3>
+                    <p>Proven track record since 2006 with thousands of successful cases and satisfied clients.</p>
+                </div>
+
+                <div class="reason-box">
+                    <div class="reason-icon">🎯</div>
+                    <h3>Result-Oriented Approach</h3>
+                    <p>Focused on delivering practical solutions and achieving your specific legal and property goals.</p>
+                </div>
+
+                <div class="reason-box">
+                    <div class="reason-icon">✅</div>
+                    <h3>Complete Legal Compliance</h3>
+                    <p>Ensures all work meets government regulations and legal requirements without any shortcuts.</p>
+                </div>
+
+                <div class="reason-box">
+                    <div class="reason-icon">💬</div>
+                    <h3>Transparent Communication</h3>
+                    <p>Clear, honest, and regular updates on your case progress and legal matters.</p>
+                </div>
+
+                <div class="reason-box">
+                    <div class="reason-icon">🏢</div>
+                    <h3>One-Stop Solution</h3>
+                    <p>All your legal, property, and compliance needs handled by one trusted consultancy.</p>
+                </div>
+
+                <div class="reason-box">
+                    <div class="reason-icon">🤝</div>
+                    <h3>Personalized Service</h3>
+                    <p>Customized legal strategies tailored to your specific needs and circumstances.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ LOCATIONS ============ -->
+    <section id="locations">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Offices</h2>
+                <p>Visit Us at Our Three Convenient Locations</p>
+            </div>
+
+            <div class="locations-grid">
+                <div class="location-card">
+                    <h3>📍 Kamothe Office</h3>
+                    <div class="location-info">
+                        <div class="location-detail">
+                            <strong>Address:</strong>
+                            <span>Kohinoor Residency CHS LTD, Office No. 01, Plot No. 2, Sec. No-11, Opp. AXIS Bank, Kamothe, Navi Mumbai - 410209 </span>
+                        </div>
+                        <div class="location-detail">
+                            <strong>Phone:</strong>
+                            <span><a href="tel:+919769573939">+91 97695 73939</a><br><a href="tel:+919769373939">+91 97693 73939</a></span>
+                        </div>
+                        <div class="location-detail">
+                            <strong>Hours:</strong>
+                            <span>Mon - Sun: 10:00 AM - 6:00 PM<br></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="location-card">
+                    <h3>📍 Ulwe Office</h3>
+                    <div class="location-info">
+                        <div class="location-detail">
+                            <strong>Address:</strong>
+                            <span>Shop No. 2, Bhosale Tulip, Plot No. 13,Sec. 21, Ulwe, Navi Mumbai - 410206</span>
+                        </div>
+                        <div class="location-detail">
+                            <strong>Phone:</strong>
+                            <span><a href="tel:+919969625914">+91 99696 25914</a></span>
+                        </div>
+                        <div class="location-detail">
+                            <strong>Hours:</strong>
+                            <span>Mon - Sun: 10:00 AM - 6:00 PM</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="location-card">
+                    <h3>📍 Fort Office</h3>
+                    <div class="location-info">
+                        <div class="location-detail">
+                            <strong>Address:</strong>
+                            <span>Off. No. 302, 3rd Floor, Bharat Insurance Bldg., Horniman Circle, Fort, Mumbai - 400001</span>
+                        </div>
+                        <div class="location-detail">
+                            <strong>Phone:</strong>
+                            <span><a href="tel:+919819853939 ">+91 981 985 3939 </a><br><a href="tel:022-66662612">022-66662612</a></span>
+                        </div>
+                        <div class="location-detail">
+                            <strong>Hours:</strong>
+                            <span>Mon - Sun: 10:00 AM - 6:00 PM</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Get In Touch</h2>
+                <p>We're Here to Help with Your Legal & Property Needs</p>
+            </div>
+
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-method">
+                        <div class="contact-icon">📞</div>
+                        <div class="contact-details">
+                            <h3>Phone Numbers</h3>
+                            <p><a href="tel:+919769573939">+91 97695 73939</a><br>
+                            <a href="tel:+919769373939">+91 97693 73939</a></p>
+                        </div>
+                    </div>
+
+                    <div class="contact-method">
+                        <div class="contact-icon">✉️</div>
+                        <div class="contact-details">
+                            <h3>Email Address</h3>
+                            <p><a href="mailto:shree.associates.entp@gmail.com">shree.associates.entp@gmail.com</a><br>
+                            <a href="mailto:shree.associates79@gmail.com">shree.associates79@gmail.com</a></p>
+                        </div>
+                    </div>
+
+                    <div class="contact-method">
+                        <div class="contact-icon">💬</div>
+                        <div class="contact-details">
+                            <h3>WhatsApp Chat</h3>
+                            <p><a href="https://wa.me/+919769373939" target="_blank">+919769373939</a></p>
+                        </div>
+                    </div>
+
+                    <div class="contact-buttons">
+                        <a href="tel:+919769573939" class="btn-large btn-contact">📞 Call Us Now</a>
+                        <a href="https://wa.me/+919769373939" class="btn-large btn-contact" style="background-color: #25D366;" target="_blank">💬 Chat on WhatsApp</a>
+                    </div>
+                </div>
+
+                <div class="contact-form-container">
+                    <h3 style="color: var(--primary-red); margin-bottom: 25px; text-align: center;">Quick Inquiry Form</h3>
+                    <form onsubmit="return handleFormSubmit(event)">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Subject *</label>
+                            <input type="text" id="subject" name="subject" placeholder="e.g., Society Registration, Conveyance..." required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="description">Your Message *</label>
+                            <textarea id="description" name="description" placeholder="Tell us about your legal/property needs..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-submit">SUBMIT INQUIRY</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ CTA SECTION ============ -->
+    <section class="cta-section">
+        <div class="cta-content">
+            <h2>Need Help with Society, Legal or Property Work?</h2>
+            <p>Don't take risks with documentation & compliance. Get expert guidance from Shree Associates today.</p>
+            <p style="font-size: 16px; margin-bottom: 25px; color: rgba(255,255,255,0.9);">With 20+ years of experience, we ensure your legal matters are handled with precision and care.</p>
+            <a href="tel:+919876543210" class="btn-cta">CONTACT SHREE ASSOCIATES NOW</a>
+        </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Shree Associates</h3>
+                <p>Legal, Society & Property Compliance Consultant</p>
+                <p style="margin-top: 10px; color: var(--primary-red);">Trusted Legal Guidance Since 2006</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Services</h3>
+                <p><a href="#services">Society Registration</a></p>
+                <p><a href="#services">Conveyance & Legal Docs</a></p>
+                <p><a href="#services">CIDCO Work</a></p>
+                <p><a href="#services">Audit & Accounting</a></p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Locations</h3>
+                <p>Kamothe, Navi Mumbai</p>
+                <p>Ulwe, Navi Mumbai</p>
+                <p>Fort, Mumbai</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p><a href="tel:+919769573939">+91 976 957 3939</a></p>
+                <p><a href="mailto:shree.associates.entp@gmail.com">shree.associates.entp@gmail.com</a></p>
+                <p><a href="https://wa.me/+919769373939" target="_blank">WhatsApp Chat</a></p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 Shree Associates. All Rights Reserved. | Legal & Property Compliance Consultant</p>
+            <p style="margin-top: 10px;">Professional Legal Services Since 2006 | Trusted by 1000+ Societies & Individuals</p>
+        </div>
+    </footer>
+
+    <!-- ============ FLOATING BUTTONS ============ -->
+    <div class="floating-buttons">
+        <a href="https://wa.me/919876543210" target="_blank" class="fab fab-whatsapp" title="Chat on WhatsApp">💬</a>
+        <a href="tel:+919876543210" class="fab fab-call" title="Call Us">📞</a>
+    </div>
+
+    <script>
+
+function handleFormSubmit(event) {
+    event.preventDefault();
+
+    const name = document.getElementById('name').value.trim();
+    const phone = document.getElementById('phone').value.trim();
+    const subject = document.getElementById('subject').value.trim();
+    const description = document.getElementById('description').value.trim();
+
+    // Validation (important)
+    if (!name || !phone || !subject || !description) {
+        alert("Please fill all fields");
+        return false;
+    }
+
+    // WhatsApp message
+    const message = `Hello! I'm ${name}
+I need help with: ${subject}
+Details: ${description}
+Phone: ${phone}`;
+
+    // IMPORTANT: no "+" in wa.me
+    const whatsappUrl = `https://wa.me/919769373939?text=${encodeURIComponent(message)}`;
+
+    // Open WhatsApp
+    window.open(whatsappUrl, '_blank');
+
+    // Reset form
+    document.querySelector("form").reset();
+
+    return false;
+}
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href !== '#') {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        target.scrollIntoView({ behavior: 'smooth' });
+                    }
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
